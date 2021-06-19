@@ -43,7 +43,10 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
+        //promises 
+        //.then stores good information and sends it to the front end
         .then(dbUserData => res.json(dbUserData))
+        //.catch picks up the error and sends it to the front end
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
