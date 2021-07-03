@@ -88,15 +88,6 @@ router.post('/login', (req, res) => {
         }
 
         const validPassword = dbUserData.checkPassword(req.body.password);
-<<<<<<< HEAD:routes/api/user-routes.js
-
-        if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect password!' });
-            return;
-        }
-
-        res.json({ user: dbUserData, message: 'You are now logged in!' });
-=======
 
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password!' });
@@ -110,7 +101,6 @@ router.post('/login', (req, res) => {
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
->>>>>>> develop:controllers/api/user-routes.js
     });
 });
 
